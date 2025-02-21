@@ -6,6 +6,11 @@ h1 {
     color: green;
 }
 
+body {
+    font-family: "Papyrus", sans-serif; /*if Papyrus isn't supported by the browser then sans-serif font will be used*/ 
+}
+
+
 .center {
     display: block; /*makes whatever calls .center into a block element*/
     /*margin-left and margin-right are set to auto to center the image*/
