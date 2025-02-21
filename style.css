@@ -5,3 +5,11 @@ style.css edits Practice1.html
 h1 {
     color: green;
 }
+
+.center {
+    display: block; /*makes whatever calls .center into a block element*/
+    /*margin-left and margin-right are set to auto to center the image*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+}
