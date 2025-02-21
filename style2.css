@@ -2,4 +2,6 @@
 style2.css edits Practice2.html
 */
 
-p.solid {border-style: solid};
+p {
+    border: 4px
+}
