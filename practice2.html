@@ -8,19 +8,22 @@
     <body>
         <p id="paragraph"><br>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
         <p><br><br></p>
-        <label for="pColor">Paragraph color:</label>
-        <input type="text" id="pColor" name="pColor"<br><br>>
+        <label for="pColor">Paragraph color:</label> <!--creates a label-->
+        <input type="text" id="pColor" name="pColor"<br><br>> <!--input allows user to input a value, text allows them to input RGB values, and the id is pColor-->
         <label for="bColor">Border color:</label>
         <input type="text" id="bColor" name="bColor">
         
         <script> //I tried researching how to use user input in a label to edit something using just CSS and couldn't find a way so I'm also using JavaScript
             //JavaScript needed for changing paragraph color using the user's input in the label
             //also most of this is from chatgpt because I didn't know how to do this previously
-            const pColor = document.getElementById('pColor');
+            
+            //document means the whole web page and .getElementById(id) returns the value stored in id 
+            
+            const pColor = document.getElementById('pColor'); 
             const paragraph = document.getElementById('paragraph');
 
-            pColor.addEventListener('input', function (){
-                paragraph.style.color = pColor.value;
+            pColor.addEventListener('input', function (){ //addEventListener "listens" for input changes in the HTML element pColor so when user inputs a hex it will then perform the following code once the method catches it
+                paragraph.style.color = pColor.value; //paragraph.style.color means the color element of paragraph and then pColor.value gets the value stored in the element pColor
             });
         </script>
     </body>
