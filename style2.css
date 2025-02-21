@@ -1,6 +1,7 @@
 /*
 style2.css edits Practice2.html
-
-don't actually need ~ all CSS code is built into html bc had to use JavaScript to have user input actually update colors of paragraph and border
 */
 
+p {
+    border: 4px solid black; /*creates generic border of black if user doesn't input anything*/
+}
