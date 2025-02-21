@@ -29,7 +29,7 @@
             const bColor = document.getElementById('bColor');
 
             bColor.addEventListener('input', function() {
-                paragraph.style.border = `4px solid ${bColor.value}`; //got this from chatGpt ~ paragraph.style.border references the border style element of paragraph and 4px determines how fat the border is and solid says what kind of border and then bColorInput.value grabs the value stored in the element/variable bColorInput
+                paragraph.style.border = `4px solid bColor.value`; //got this from chatGpt ~ paragraph.style.border references the border style element of paragraph and 4px determines how fat the border is and solid says what kind of border and then bColorInput.value grabs the value stored in the element/variable bColorInput
             })
             
         </script>
