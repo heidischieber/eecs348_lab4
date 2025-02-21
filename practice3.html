@@ -18,7 +18,9 @@
 
             const password1 = document.getElementById('password1'); //creates a variable called password1 that holds the value contained in password1 which is found by the getElementById() method
             const password2 = document.getElementById('password2'); //creates a variable called password2 that holds the value contained in password2 which is found by the getElementById() method
-            
+            const feedback = document.createElement('div');
+            document.body.appendChild(feedback);
+
             function passwordChecker() {
                 let correct_p_len = false;
                 let passwords_match = false;
@@ -32,17 +34,11 @@
                 }
 
                 if (correct_p_len && passwords_match){
-                    const element = document.createElement('div');
-                    element.innerHTML = `<p>The passwords match.</p>`;
-                    document.body.appendChild(element);
+                    feedback.innerHTML = `<p>The passwords match.</p>`;
                 } else if (!passwords_match){
-                    const element = document.createElement('div');
-                    element.innerHTML = `<p>The passwords don't match.</p>`;
-                    document.body.appendChild(element);
+                    feedback.innerHTML = `<p>The passwords don't match.</p>`;
                 } else {
-                    const element = document.createElement('div');
-                    element.innerHTML = `<p>The password must contain at least 8 characters.</p>`;
-                    document.body.appendChild(element);
+                    feedback.innerHTML = `<p>The password must contain at least 8 characters.</p>`;
                 }
                 
             }
