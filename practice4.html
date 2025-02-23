@@ -4,17 +4,16 @@
         <title>PHP Multiplication Table</title>
     </head>
 
-    <!--create a form to get user's input-->
-    <form method="POST">
-        <label for="number">Enter number:</label>
-        <input type="number" id="number" name="number" required><br><br>
-        <input type="submit" value="Generate Table">
+    <!--create a form to get user's input. also got this form method idea from ChatGPT-->
+    <form method="POST"> <!--post is used to send information inputed by the user to the server-->
+        <label for="number">Enter number:</label> <!--creates a label called "number" that stores the user's input-->
+        <input type="number" id="number" name="number" required><br><br> <!--establishes this as user input-->
     </form>
 
     <body>
         <?php
-
-        $number = $_POST['number'];
+        <!--got these concepts from chatGPT and stack overflow bc I've never worked with php before-->
+        $number = $_POST['number']; 
 
         echo "<table border='1' cellpadding='3' cellspacing='0'>"; //creates the table 
         echo "<tr><th>*</th>"; //creates table header 
