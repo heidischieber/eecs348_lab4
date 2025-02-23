@@ -11,10 +11,8 @@
         <?php
         $number = readline("Enter a number: ");
 
-        if (is_numeric($number)){
-            for ($i = 0; $i < $number; $i++) {
-                print $number . " * " . $i . " = " . ($number * $i);
-            }
+        for ($i = 0; $i < $number; $i++) {
+            print $number . " * " . $i . " = " . ($number * $i);
         }
 
         ?>
