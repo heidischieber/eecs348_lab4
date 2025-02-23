@@ -4,13 +4,19 @@
         <title>PHP Multiplication Table</title>
     </head>
 
+    <label for="number">Enter Number:</label> <!--creates a label for the user to input a number-->
+    <input type="number" id="number" name="number"<br><br>> <!--determines the type as "text", id as "number", and name as "number" of the user's input-->
+  
     <body>
         <?php
         $number = readline("Enter a number: ");
 
-        for ($i = 0; $i < $number; $i++) {
-            print $i . "<br>";
+        if (is_numeric($number)){
+            for ($i = 0; $i < $number; $i++) {
+                print $number . " * " . $i . " = " . ($number * $i);
+            }
         }
+
         ?>
     </body>
 </html>
