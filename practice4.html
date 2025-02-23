@@ -12,29 +12,36 @@
     </form>
 
     <body>
-        <?php
-        if (isset($_POST['number'])){
-        //got these concepts from chatGPT and stack overflow bc I've never worked with php before
-            $number = $_POST['number']; 
-
-            echo "<table border='1' cellpadding='3' cellspacing='0'>"; //creates the table 
-            echo "<tr><th>*</th>"; //creates table header 
+        <?php //creates php
+        if (isset($_POST['number'])){ //checks if user has input a number into POST data
+        
+            //got these concepts from chatGPT and stack overflow bc I've never worked with php before
             
-            for($col = 1; $col <= $number; $col++){
-                echo "<th>" . $col . "</th>";
-            }
-            echo "</tr>";
+            $number = $_POST['number']; //store user's input in $number variable
 
-            for ($row = 1; $row <= $number; $row++){
-                echo "<tr><th>" . $row . "</th>";
+            echo "<table border='1' cellpadding='3' cellspacing='0'>"; //creates the table and adds a border, cellpadding, and no cellspacing
+            echo "<tr><th></th>"; //first row will hold column headers
+            
+                //tr defines a table's row, th creates a table header cell, and td is a table data cell
+            //and echo is used for displaying data to the screen (kind of like print)
+            
+            for($col = 1; $col <= $number; $col++){ //for loop from 1 to $number
+                echo "<th>" . $col . "</th>"; //cretaes table header with each column number in this range
+            }
+
+            echo "</tr>"; //this ends the header row
+
+            for ($row = 1; $row <= $number; $row++){ //for loop from 1 to $number
+                echo "<tr><th>" . $row . "</th>"; //in each row first cell will hold the row number
                 
-                    for ($col = 1; $col <= $number; $col++){
-                        echo "<td>" . ($col * $row) . "</td>";
+                    for ($col = 1; $col <= $number; $col++){ //for loop through columns from 1 to $number
+                        echo "<td>" . ($col * $row) . "</td>"; //displays $col * $row to from the multiplication table
                     }
-                    echo "</tr>";
+                    echo "</tr>"; //this ends current row (whatever $row contians currently)
             }
             
-            echo "</table>";
+            echo "</table>"; //this ends the table after creation
+            
         }
         ?>
     </body>
