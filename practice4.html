@@ -4,7 +4,7 @@
         <title>PHP Multiplication Table</title>
     </head>
 
-    <form method="DISPLAY">
+    <form method="POST">
         <label for="number">Enter number:</label>
         <input type="number" id="number" name="number" required><br><br>
         <input type="submit" value="Generate Table">
@@ -13,7 +13,7 @@
     <body>
         <?php
 
-        $number = $_DISPLAY['number'];
+        $number = $_POST['number'];
 
         for ($i = 0; $i < $number; $i++) {
             echo $number . " * " . $i . " = " . ($number * $i) . "<br>";
